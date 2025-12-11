@@ -82,7 +82,7 @@ const Features = () => {
                     </div>
 
                     {/* Admin */}
-                    <div className="glass-card animate-in delay-300" style={{ gridColumn: '1 / -1', border: '1px solid rgba(244, 63, 94, 0.2)' }}>
+                    <div className="glass-card animate-in delay-300" style={{ border: '1px solid rgba(244, 63, 94, 0.2)' }}>
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '2rem' }}>
                             <h3 style={{ margin: 0 }}>Administración del Sistema</h3>
                             <div style={{ padding: '8px', background: 'rgba(244, 63, 94, 0.1)', borderRadius: '10px' }}>
@@ -90,34 +90,28 @@ const Features = () => {
                             </div>
                         </div>
 
-                        <div className="grid grid-3" style={{ gap: '2rem' }}>
-                            <div>
-                                <h4 style={{ fontSize: '1.1rem', marginBottom: '1rem', color: '#f43f5e' }}>Gestión de Usuarios</h4>
-                                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
+                        <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                            <li>
+                                <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: '#f43f5e' }}>Gestión de Usuarios</h4>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
                                     Dar de alta profesionales con credenciales generadas.
                                 </p>
-                            </div>
+                            </li>
 
-                            <div>
-                                <h4 style={{ fontSize: '1.1rem', marginBottom: '1rem', color: '#f43f5e' }}>Historial de Casos</h4>
-                                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                                    Vista de tabla de casos filtrada por Fecha, Nivel de Riesgo, Tipo de Atención. (Datos Anonimizados).
+                            <li>
+                                <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: '#f43f5e' }}>Historial de Casos</h4>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+                                    Vista de tabla de casos filtrada por Fecha, Nivel de Riesgo, Tipo de Atención.
                                 </p>
-                            </div>
+                            </li>
 
-                            <div>
-                                <h4 style={{ fontSize: '1.1rem', marginBottom: '1rem', color: '#f43f5e' }}>Estadísticas y Reportes</h4>
-                                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)' }}>
-                                    Reportes exportables a PDF.
-                                    <br />
-                                    • Intervenciones por período
-                                    <br />
-                                    • Distribución de riesgos
-                                    <br />
-                                    • Uso de canales de comunicación
+                            <li>
+                                <h4 style={{ fontSize: '1rem', marginBottom: '0.5rem', color: '#f43f5e' }}>Estadísticas y Reportes</h4>
+                                <p style={{ fontSize: '0.9rem', color: 'var(--text-muted)', margin: 0 }}>
+                                    Reportes exportables a PDF. Intervenciones, riesgos y uso de canales.
                                 </p>
-                            </div>
-                        </div>
+                            </li>
+                        </ul>
                     </div>
 
                 </div>

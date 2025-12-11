@@ -3,7 +3,7 @@ import { AlertCircle, Clock } from 'lucide-react';
 
 const Problem = () => {
     return (
-        <section id="problem" className="section">
+        <section id="problem" className="section" style={{ paddingTop: '0' }}>
             <div className="container">
                 <div style={{ marginBottom: '5rem', textAlign: 'center' }}>
                     <h2 className="animate-in">La Crisis Silenciosa</h2>

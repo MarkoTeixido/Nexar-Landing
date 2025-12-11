@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <footer style={{
             borderTop: '1px solid var(--glass-border)',
-            padding: '4rem 0',
+            padding: '1rem 0',
             textAlign: 'center',
             color: 'var(--text-muted)',
             background: 'var(--background)',

@@ -45,10 +45,26 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <div className="desktop-menu">
-                    <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
-                        <a href="#problem" style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: 500 }}>El Problema</a>
-                        <a href="#solution" style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: 500 }}>La Solución</a>
-                        <a href="#features" style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: 500 }}>MVP</a>
+                    <div style={{ display: 'flex', gap: '2.5rem', alignItems: 'center' }}>
+                        {['El Problema', 'La Solución', 'MVP'].map((item, index) => {
+                            const href = item === 'El Problema' ? '#problem' : item === 'La Solución' ? '#solution' : '#features';
+                            return (
+                                <a key={index} href={href} style={{
+                                    color: 'var(--text-muted)',
+                                    fontSize: '0.95rem',
+                                    fontWeight: 500,
+                                    textDecoration: 'none',
+                                    letterSpacing: '-0.01em',
+                                    transition: 'all 0.3s ease',
+                                    position: 'relative',
+                                }}
+                                    onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--text)'; }}
+                                    onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--text-muted)'; }}
+                                >
+                                    {item}
+                                </a>
+                            );
+                        })}
                     </div>
 
                     <div style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
@@ -67,26 +83,51 @@ const Navbar = () => {
                 {/* Mobile Sidebar */}
                 <div style={{
                     position: 'fixed',
-                    top: 0,
-                    right: 0,
-                    bottom: 0,
-                    width: '100%',
-                    maxWidth: '300px',
-                    background: 'var(--glass-bg)',
-                    backdropFilter: 'blur(30px)',
-                    WebkitBackdropFilter: 'blur(30px)',
-                    borderLeft: '1px solid var(--glass-border)',
-                    padding: '6rem 2rem',
-                    transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)',
-                    transition: 'transform 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                    zIndex: 1001,
+                    inset: 0, // Top, Right, Bottom, Left: 0
+                    width: '100vw',
+                    height: '100vh',
+                    background: 'var(--background)',
                     display: 'flex',
                     flexDirection: 'column',
-                    gap: '2rem'
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    gap: '4rem',
+                    transform: isMenuOpen ? 'translateX(0)' : 'translateX(100%)',
+                    transition: 'transform 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+                    zIndex: 1001,
+                    overflow: 'hidden'
                 }}>
-                    <a href="#problem" onClick={toggleMenu} style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--text)' }}>El Problema</a>
-                    <a href="#solution" onClick={toggleMenu} style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--text)' }}>La Solución</a>
-                    <a href="#features" onClick={toggleMenu} style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--text)' }}>MVP</a>
+                    {/* ThemeToggle removed from here as requested to be next to burger always */}
+
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', alignItems: 'center' }}>
+                        <a href="#problem" onClick={toggleMenu} style={{
+                            fontSize: '2.5rem',
+                            fontWeight: 700,
+                            color: 'var(--text)',
+                            textDecoration: 'none',
+                            letterSpacing: '-0.02em',
+                        }}>
+                            El Problema
+                        </a>
+                        <a href="#solution" onClick={toggleMenu} style={{
+                            fontSize: '2.5rem',
+                            fontWeight: 700,
+                            color: 'var(--text)',
+                            textDecoration: 'none',
+                            letterSpacing: '-0.02em',
+                        }}>
+                            La Solución
+                        </a>
+                        <a href="#features" onClick={toggleMenu} style={{
+                            fontSize: '2.5rem',
+                            fontWeight: 700,
+                            color: 'var(--text)',
+                            textDecoration: 'none',
+                            letterSpacing: '-0.02em',
+                        }}>
+                            MVP
+                        </a>
+                    </div>
                 </div>
 
                 {/* Overlay */}

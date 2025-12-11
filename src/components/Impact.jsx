@@ -24,7 +24,7 @@ const Impact = () => {
                     Representa la modernización necesaria de la atención pública en salud mental.
                 </p>
 
-                <div className="grid grid-3">
+                <div className="grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))', gap: '2rem' }}>
                     <div className="glass-card animate-in delay-200" style={{ textAlign: 'left' }}>
                         <div style={{ marginBottom: '1rem' }}><Lightbulb color="var(--accent)" size={32} /></div>
                         <h3 style={{ fontSize: '1.25rem' }}>Innovación Social</h3>

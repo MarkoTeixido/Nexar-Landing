@@ -19,36 +19,64 @@
   --accent-2: #d946ef;
   /* Magenta */
   --success: #10b981;
+  /* GLOBAL VARIABLES - NEXAR BRAND COLORS */
+  /* Brand Palette from Image */
+  --nexar-navy: #1B3B59;
+  /* Deep Blue from Text/Bubble */
+  --nexar-teal: #2EC4B6;
+  /* Mint/Teal from 'N' */
+  --nexar-teal-light: #CBF3F0;
+  /* Light Mint */
+
+  --font-main: 'Inter', system-ui, sans-serif;
+
+  /* Light Theme - Default */
+  --background: #ffffff;
+  --text: #1B3B59;
+  /* Navy Text for high contrast & brand alignment */
+  --text-muted: #536b82;
+  /* Lighter Blue-Grey */
+
+  --primary: #1B3B59;
+  /* Navy as Primary */
+  --accent: #2EC4B6;
+  /* Teal as Accent */
+
+  --card-bg: rgba(255, 255, 255, 0.85);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(27, 59, 89, 0.1);
+  /* Navy tinted border */
+
+  /* Decorative Gradients */
+  --gradient-noise-1: rgba(46, 196, 182, 0.35);
+  /* Teal Blob */
+  --gradient-noise-2: rgba(27, 59, 89, 0.25);
+  /* Navy Blob */
+
+  --success: #2EC4B6;
+  /* Use Brand Teal for success indicators */
   --warning: #f59e0b;
   --danger: #ef4444;
-
-  --glass-border: rgba(255, 255, 255, 0.1);
-  --glass-bg: rgba(255, 255, 255, 0.05);
-
-  --gradient-noise-1: rgba(59, 130, 246, 0.15);
-  --gradient-noise-2: rgba(139, 92, 246, 0.15);
-}
-
-/* Light Theme Variables */
-[data-theme='light'] {
-  --background: #ffffff;
-  --text: #0f172a;
-  --text-muted: #475569;
-  --card-bg: rgba(255, 255, 255, 0.8);
-  --glass-bg: rgba(255, 255, 255, 0.7);
-  --glass-border: rgba(0, 0, 0, 0.1);
-  --gradient-noise-1: rgba(59, 130, 246, 0.1);
-  --gradient-noise-2: rgba(139, 92, 246, 0.1);
 }
 
 /* Dark Theme Variables */
 [data-theme='dark'] {
-  --background: #0f172a;
-  --text: #f8fafc;
+  --background: #0B1623;
+  /* Very Dark Navy */
+  --text: #f1f5f9;
   --text-muted: #94a3b8;
-  --card-bg: rgba(15, 23, 42, 0.6);
-  --glass-bg: rgba(15, 23, 42, 0.6);
+
+  --primary: #4FD1C5;
+  /* Brighter Teal for Dark Mode */
+  --accent: #38bdf8;
+  /* Blue accent */
+
+  --card-bg: rgba(11, 22, 35, 0.8);
+  --glass-bg: rgba(11, 22, 35, 0.7);
   --glass-border: rgba(255, 255, 255, 0.1);
+
+  --gradient-noise-1: rgba(46, 196, 182, 0.2);
+  --gradient-noise-2: rgba(56, 189, 248, 0.2);
 }
 
 html {
@@ -147,11 +175,14 @@ body {
   border-color: var(--primary);
 }
 
+/* Utilities */
 .text-gradient-blue {
-  background: -webkit-linear-gradient(45deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, var(--nexar-navy) 0%, var(--nexar-teal) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  color: var(--primary);
+  /* Fallback */
 }
 
 /* Animations */
