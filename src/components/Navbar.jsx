@@ -44,7 +44,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Desktop Menu */}
-                <div className="desktop-menu" style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
+                <div className="desktop-menu">
                     <div style={{ display: 'flex', gap: '2rem', alignItems: 'center' }}>
                         <a href="#problem" style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: 500 }}>El Problema</a>
                         <a href="#solution" style={{ color: 'var(--text-muted)', fontSize: '0.95rem', fontWeight: 500 }}>La Solución</a>
@@ -57,7 +57,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile Toggle */}
-                <div className="mobile-toggle" style={{ display: 'none', alignItems: 'center', gap: '1rem', zIndex: 1002 }}>
+                <div className="mobile-toggle" style={{ alignItems: 'center', gap: '1rem', zIndex: 1002 }}>
                     <ThemeToggle />
                     <button onClick={toggleMenu} style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text)' }}>
                         {isMenuOpen ? <X size={28} /> : <Menu size={28} />}

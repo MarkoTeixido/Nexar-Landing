@@ -10,7 +10,7 @@ const Features = () => {
                     <p className="animate-in delay-100">Características núcleo requeridas para el Producto Mínimo Viable.</p>
                 </div>
 
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '2rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
 
                     {/* Public / Anonymous */}
                     <div className="glass-card animate-in delay-100">
