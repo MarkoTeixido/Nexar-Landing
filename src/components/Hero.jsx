@@ -18,8 +18,8 @@ const Hero = () => {
                 top: '20%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
-                width: '600px',
-                height: '600px',
+                width: 'min(600px, 90vw)',
+                height: 'min(600px, 90vw)',
                 background: 'radial-gradient(circle, var(--gradient-noise-1) 0%, transparent 70%)',
                 filter: 'blur(80px)',
                 zIndex: -1
