@@ -1,16 +1,27 @@
-# React + Vite
+# Nexar
+**Sistema de Triaje y Conexión en Salud Mental**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page informativa para el proyecto Nexar, diseñada para presentar una solución tecnológica a la crisis de salud pública en atención psicológica.
 
-Currently, two official plugins are available:
+## 🚀 Sobre el Proyecto
+Nexar busca democratizar el acceso a la salud mental mediante una plataforma que conecta pacientes con profesionales, optimizando los recursos públicos y reduciendo los tiempos de espera.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Características
+- **Diseño Premium**: Estética moderna con Glassmorphism y gradientes.
+- **Modo Claro/Oscuro**: Adaptabilidad visual completa.
+- **Informativo**: Secciones claras de *Problema*, *Solución* e *Impacto Social*.
 
-## React Compiler
+## 🛠️ Tecnologías
+- Vite + React
+- Vanilla CSS (Glassmorphism & Theming)
+- Lucide React (Íconos)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📦 Cómo Ejecutar
 
-## Expanding the ESLint configuration
+```bash
+# Instalar dependencias
+npm install
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Iniciar servidor de desarrollo
+npm run dev
+```
